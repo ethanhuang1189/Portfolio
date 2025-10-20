@@ -6,6 +6,7 @@ import moviesfordevs from "../../public/moviesfordevs.png";
 import velez from "../../public/velez.png";
 import munchmatch from "../../public/munchmatch.png";
 import editsproject from "../../public/edits_project.png";
+import pokemonproject from "../../public/pokemon_project.PNG";
 
 interface Project {
   title: string;
@@ -16,6 +17,13 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: "Pokemon Machine Learning Battle Bot",
+    image: pokemonproject as ImageMetadata,
+    link: "https://github.com/ethanhuang1189/pokemon_ml_project",
+    preview: "https://github.com/ethanhuang1189/pokemon_ml_project",
+    status: "In Progress",
+  },
   {
     title: "Munch Match",
     image: munchmatch as ImageMetadata,
