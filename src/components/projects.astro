@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import munchmatch from "../../public/munchmatch.png";
 import editsproject from "../../public/edits_project.png";
 import mysql from "../../public/svg/mysql.svg";
+import showdown from "../../public/showdown_project.png";
 
 interface Project {
   title: string;
@@ -26,6 +27,13 @@ const projects: Project[] = [
     image: editsproject as ImageMetadata,
     link: "https://github.com/ethanhuang1189/edits-tiktok-project",
     preview: "https://edits-tiktok-project.pages.dev/",
+    status: "Deployed",
+  },
+  {
+    title: "Pokemon AI Bot Documentation",
+    image: showdown as ImageMetadata,
+    link: "https://github.com/ethanhuang1189/pokemon_ml_project",
+    preview: "https://pokemon-ml-project-documentation.pages.dev/",
     status: "Deployed",
   },
   {
