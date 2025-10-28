@@ -1,11 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import svgl from "../../public/svgl.png";
-import stockin from "../../public/stockin.png";
-import moviesfordevs from "../../public/moviesfordevs.png";
-import velez from "../../public/velez.png";
 import munchmatch from "../../public/munchmatch.png";
 import editsproject from "../../public/edits_project.png";
+import mysql from "../../public/svg/mysql.svg";
 import pokemonproject from "../../public/pokemon_project.PNG";
 
 interface Project {
@@ -14,15 +11,17 @@ interface Project {
   link: string;
   preview: string;
   status: string;
+  imageStyle?: string;
 }
 
 const projects: Project[] = [
   {
-    title: "Pokemon Machine Learning Battle Bot",
-    image: pokemonproject as ImageMetadata,
-    link: "https://github.com/ethanhuang1189/pokemon_ml_project",
-    preview: "https://github.com/ethanhuang1189/pokemon_ml_project",
+    title: "Banking System Backend",
+    image: mysql as ImageMetadata,
+    link: "https://github.com/ethanhuang1189/ekh35-ethan-huang-winter-2025-001-se-201",
+    preview: "https://github.com/ethanhuang1189/ekh35-ethan-huang-winter-2025-001-se-201",
     status: "In Progress",
+    imageStyle: "object-contain p-8 bg-white",
   },
   {
     title: "Munch Match",
@@ -32,38 +31,17 @@ const projects: Project[] = [
     status: "Deployed",
   },
   {
+    title: "Pokemon Battle Bot",
+    image: pokemonproject as ImageMetadata,
+    link: "https://github.com/ethanhuang1189/pokemon_ml_project_documentation",
+    preview: "https://github.com/ethanhuang1189/pokemon_ml_project_documentation",
+    status: "In Progress",
+  },
+  {
     title: "Personal Video Player",
     image: editsproject as ImageMetadata,
     link: "https://github.com/ethanhuang1189/edits-tiktok-project",
     preview: "https://edits-tiktok-project.pages.dev/",
-    status: "Deployed",
-  },
-  {
-    title: "MoviesForDevs",
-    image: moviesfordevs as ImageMetadata,
-    link: "https://github.com/gothsec/MoviesForDevs",
-    preview: "https://movies-for-devs.vercel.app",
-    status: "Deployed",
-  },
-  {
-    title: "StockIn",
-    image: stockin as ImageMetadata,
-    link: "https://github.com/gothsec/stockin-demo",
-    preview: "https://stockin-demo.vercel.app",
-    status: "On Development",
-  },
-  {
-    title: "Svgl.app",
-    image: svgl as ImageMetadata,
-    link: "https://github.com/pheralb/svgl",
-    preview: "https://svgl.app",
-    status: "Contributor",
-  },
-  {
-    title: "Rifas Velez Web",
-    image: velez as ImageMetadata,
-    link: "https://github.com/Buga-Software/rifasvelez-web",
-    preview: "https://www.rifasvelez.com",
     status: "Deployed",
   },
 ];
@@ -91,7 +69,7 @@ const projects: Project[] = [
                 <Image
                   src={project.image}
                   alt={project.title}
-                  class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
+                  class={`w-full h-48 md:h-72 ${project.imageStyle || 'object-cover'} group-hover:scale-105 transition-transform duration-300`}
                 />
               </div>
               <div class="flex items-center px-3">
