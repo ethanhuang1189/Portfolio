@@ -4,4 +4,4 @@ Software Developer Student at Drexel University, passionate about building scala
 
 Developing web applications, data-driven tools, and AI-powered solutions using Python, Java, and JavaScript.
 
-[View Portfolio](https://portfolio-e6h.pages.dev/)
+[View Portfolio](https://ethanhuang.org)
